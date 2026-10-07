@@ -31,6 +31,7 @@ html {
 }
 
 body {
+  position: relative;
   margin: 0;
   font-family: "Inter", sans-serif;
   background:
@@ -40,6 +41,21 @@ body {
   color: var(--white);
   line-height: 1.7;
   overflow-x: hidden;
+  isolation: isolate;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background-image: url("../assets/images/Oráculo Ancestral em Névoa Violeta.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.14;
+  pointer-events: none;
 }
 
 img {
