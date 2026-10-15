@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      const whatsappNumber = "551989727224";
+      const whatsappNumber = "+5551989727254";
       const mensagem = `Olá, gostaria de solicitar um atendimento.\n\nNome:\n${nome}\nIdade:\n${idade}\nAtendimento:\n${servicosSelecionados.join(", ")}\nDescrição:\n${descricao || "Não informado"}`;
       const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(mensagem)}`;
 
