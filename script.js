@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (form && feedback) {
     form.addEventListener("submit", (event) => {
       event.preventDefault();
-
+ ,
       const nome = document.getElementById("nome").value.trim();
       const idade = Number(document.getElementById("idade").value.trim());
       const servicosSelecionados = [
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      const whatsappNumber = "55198972724";
+      const whatsappNumber = "551989727224";
       const mensagem = `Olá, gostaria de solicitar um atendimento.\n\nNome:\n${nome}\nIdade:\n${idade}\nAtendimento:\n${servicosSelecionados.join(", ")}\nDescrição:\n${descricao || "Não informado"}`;
       const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(mensagem)}`;
 

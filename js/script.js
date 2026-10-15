@@ -101,13 +101,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const playButtons = document.querySelectorAll(".play-button");
-  playButtons.forEach((button) => {
+  document.querySelectorAll(".play-button").forEach((button) => {
     button.addEventListener("click", () => {
-      const card = button.closest(".video-card");
-      const title = card?.querySelector("h3")?.textContent || "Vídeo";
-      const message = `A reprodução do ${title} será adicionada posteriormente.\nUse um link do YouTube, TikTok ou vídeo próprio.`;
-      alert(message);
+      const videoId = button.dataset.videoId;
+      const thumb = button.closest(".video-thumb");
+      const iframe = document.createElement("iframe");
+
+      iframe.src = `https://www.youtube.com/embed/${encodeURIComponent(videoId)}?autoplay=1&playsinline=1`;
+      iframe.title = button.getAttribute("aria-label") || "Vídeo";
+      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+      iframe.allowFullscreen = true;
+      iframe.referrerPolicy = "strict-origin-when-cross-origin";
+
+      thumb.replaceChildren(iframe);
+      thumb.classList.add("is-playing");
     });
   });
+
 });
