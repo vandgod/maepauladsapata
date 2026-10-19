@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => { // Espera o HTML carregar 
         return; // Interrompe a rotina quando os dados sao invalidos.
       } // Delimita ou encerra o bloco ou chamada anterior.
 
-      const whatsappNumber = "5551989727254"; // Declara `whatsappNumber` para guardar numero que recebe a solicitacao.
+      const whatsappNumber = "5551989746682"; // Declara `whatsappNumber` para guardar numero que recebe a solicitacao.
       const atendimentosFormatados = servicosSelecionados
         .map((servico) => `🔹 _${servico}_`)
         .join("\n"); // Formata cada atendimento selecionado como um item da lista.
